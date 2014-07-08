@@ -1,0 +1,15 @@
+*.gem
+*.rbc
+.bundle
+.config
+lib/bundler/man
+rdoc
+spec/reports
+tmp
+vendor/
+
+# YARD artifacts
+.yardoc
+_yardoc
+doc/
+
