@@ -2,9 +2,8 @@ GEM
   remote: https://rubygems.org/
   specs:
     backports (3.6.0)
-    mecab-heavy (0.996.2)
+    mecab-heavy (0.996.3dev)
       mini_portile (~> 0)
-    mecab-light (1.0.1)
     mini_portile (0.6.0)
     multi_json (1.10.1)
     rack (1.5.2)
@@ -29,7 +28,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  mecab-heavy
-  mecab-light
+  mecab-heavy (~> 0.996.3dev)
   sinatra
   sinatra-contrib
