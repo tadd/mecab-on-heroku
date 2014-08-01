@@ -13,10 +13,10 @@ def part_of_speech(node)
 end
 
 get '/parse/:input' do |input|
-  @@tagger = MeCab::Light::Tagger.new
+  @tagger ||= MeCab::Light::Tagger.new
 
   content_type :json
-  values = @@tagger.parse(input).map do |node|
+  values = @tagger.parse(input).map do |node|
     [node.surface, part_of_speech(node)]
   end
   {parsed: values}.to_json
