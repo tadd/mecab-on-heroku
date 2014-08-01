@@ -2,6 +2,7 @@ GEM
   remote: https://rubygems.org/
   specs:
     backports (3.6.0)
+    kgio (2.9.2)
     mecab-heavy (0.996.3dev2)
       mini_portile (~> 0)
     mini_portile (0.6.0)
@@ -11,6 +12,7 @@ GEM
       rack
     rack-test (0.6.2)
       rack (>= 1.0)
+    raindrops (0.13.0)
     sinatra (1.4.5)
       rack (~> 1.4)
       rack-protection (~> 1.4)
@@ -23,6 +25,10 @@ GEM
       sinatra (~> 1.4.0)
       tilt (~> 1.3)
     tilt (1.4.1)
+    unicorn (4.8.3)
+      kgio (~> 2.6)
+      rack
+      raindrops (~> 0.7)
 
 PLATFORMS
   ruby
@@ -31,3 +37,4 @@ DEPENDENCIES
   mecab-heavy (~> 0.996.3dev)
   sinatra
   sinatra-contrib
+  unicorn
