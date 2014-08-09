@@ -1,7 +1,7 @@
 require 'sinatra'
 require 'sinatra/reloader' if development?
 require 'json'
-require 'mecab/heavy'
+require 'mecab/light'
 
 get '/ping' do
   content_type :json
