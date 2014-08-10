@@ -17,7 +17,7 @@ get '/parse/:input' do |input|
 
   content_type :json
   values = @tagger.parse(input).map do |node|
-    [node.surface, part_of_speech(node)]
+    {surface: node.surface, part_of_speech: part_of_speech(node)}
   end
   {parsed: values}.to_json
 end
