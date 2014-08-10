@@ -13,9 +13,12 @@ def part_of_speech(node)
 end
 
 get '/parse/:input' do |input|
+  content_type :json
+  error 400, {error: 'text required'}.to_json if input.empty?
+  error 400, {error: 'text too long'}.to_json if input.length > 1000
+
   @tagger ||= MeCab::Light::Tagger.new('')
 
-  content_type :json
   values = @tagger.parse(input).map do |node|
     {surface: node.surface, part_of_speech: part_of_speech(node)}
   end
