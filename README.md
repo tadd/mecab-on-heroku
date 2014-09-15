@@ -1,4 +1,4 @@
 mecab on heroku
 ===============
 
-[mecab-heavy](https://rubygems.org/gems/mecab-heavy) のちょっとしたデモサイト
+[heroku-buildpack-mecab](https://github.com/diasks2/heroku-buildpack-mecab) のちょっとしたデモサイト
